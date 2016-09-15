@@ -14,3 +14,12 @@ D:\00988 - Ferrari- NTM Nuova Telemetria\software\CameraTest\Camera_Test\obj\Deb
 D:\00988 - Ferrari- NTM Nuova Telemetria\software\Camera_Test\bin\Debug\CameraTest.exe.config
 D:\00988 - Ferrari- NTM Nuova Telemetria\software\Camera_Test\obj\Debug\CameraTest.exe
 D:\00988 - Ferrari- NTM Nuova Telemetria\software\Camera_Test\obj\Debug\CameraTest.pdb
+D:\00988 - Ferrari- NTM Nuova Telemetria\software\Camera_Test\bin\Debug\CameraTest.exe
+D:\00988 - Ferrari- NTM Nuova Telemetria\software\Camera_Test\bin\Debug\CameraTest.pdb
+D:\00988 - Ferrari- NTM Nuova Telemetria\software\Camera_Test\bin\Debug\log4net.dll
+D:\00988 - Ferrari- NTM Nuova Telemetria\software\Camera_Test\bin\Debug\ProgImageLib.dll
+D:\00988 - Ferrari- NTM Nuova Telemetria\software\Camera_Test\bin\Debug\log4net.xml
+D:\00988 - Ferrari- NTM Nuova Telemetria\software\Camera_Test\obj\Debug\CameraTest.csprojResolveAssemblyReference.cache
+D:\00988 - Ferrari- NTM Nuova Telemetria\software\Camera_Test\obj\Debug\CameraTest.CameraTestForm.resources
+D:\00988 - Ferrari- NTM Nuova Telemetria\software\Camera_Test\obj\Debug\CameraTest.Properties.Resources.resources
+D:\00988 - Ferrari- NTM Nuova Telemetria\software\Camera_Test\obj\Debug\CameraTest.csproj.GenerateResource.Cache
