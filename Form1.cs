@@ -23,30 +23,52 @@ namespace CameraTest
         public const int BUFFER_SIZE = 2048;
         public const int I2C_BITRATE = 100;
 
+        enum CameraResolution
+        {
+            RESOLUTION_768_576,
+            RESOLUTION_768_576_DOWN,
+            RESOLUTION_768_576_YVYU,
+            RESOLUTION_1280_720,
+            RESOLUTION_1280_800,
+            RESOLUTION_1280_800p30,
+            RESOLUTION_768_576p30,
+            RESOLUTION_1280_800p30_DW,
+            RESOLUTION_800_600p30,
+            RESOLUTION_800_600p30_DW,
+            RESOLUTION_1024_768p30,
+            RESOLUTION_1024_768p30_DW,
+            RESOLUTION_1024_576p25,
+            RESOLUTION_1024_576p30,
+            RESOLUTION_1280_800_p30_test_pattern,
+            RESOLUTION_NONE
+        }
+
 
         private static readonly ILog logger = LogManager.GetLogger(typeof(CameraTestForm));
         private int deviceHandle;
         private int devicePort;
-        byte deviceAddress;
+        private CameraResolution cameraRes = CameraResolution.RESOLUTION_NONE;
         FileStream file;
 
         public CameraTestForm()
         {
             XmlConfigurator.Configure();
             InitializeComponent();
-            //textboxAppender = new TextBoxAppender();
-            //textboxAppender.FormName = "MainForm";
-            //textboxAppender.TextBoxName = "textBoxLog";
             textBoxPort.Text = "0";
             textBoxAddress.Text = "0x2C";
+            textBoxI2CSensAddress.Text = "0x30";
+
+            EnableControls(false);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(button1.Text == "Close I2C Host Adapter")
+            if(button1.Text == "Close Host Adapter")
             {
                 AardvarkApi.aa_close(deviceHandle);
-                button1.Text = "Init I2C Host Adapter";
+                button1.Text = "Init SER-DES and Host Adapter";
+                logger.Info("Port closed");
+                EnableControls(false);
                 return;
             }
 
@@ -56,6 +78,8 @@ namespace CameraTest
             byte[] Sreg = new byte[4];
             byte[] Cmd = new byte[4];
             string info;
+            byte i2cDesAddr, 
+                 i2cSensAddr;
 
             // Find all the attached devices
             int count = AardvarkApi.aa_find_devices_ext(numElem,
@@ -85,21 +109,39 @@ namespace CameraTest
                 return;
             }
 
-            // Parse the device address argument
+            // Parse the Deserialyzer address argument
             try
             {
                 if (textBoxAddress.Text.StartsWith("0x"))
                 {
-                    deviceAddress = Convert.ToByte(textBoxAddress.Text.Substring(2), 16);
+                    i2cDesAddr = Convert.ToByte(textBoxAddress.Text.Substring(2), 16);
                 }
                 else
                 {
-                    deviceAddress = Convert.ToByte(textBoxAddress.Text);
+                    i2cDesAddr = Convert.ToByte(textBoxAddress.Text);
                 }
             }
             catch (Exception)
             {
-                logger.Error("Error: invalid device addr");
+                logger.Error("Error: invalid DES address");
+                return;
+            }
+
+            // Parse the Sensor address argument
+            try
+            {
+                if (textBoxI2CSensAddress.Text.StartsWith("0x"))
+                {
+                    i2cSensAddr = Convert.ToByte(textBoxI2CSensAddress.Text.Substring(2), 16);
+                }
+                else
+                {
+                    i2cSensAddr = Convert.ToByte(textBoxAddress.Text);
+                }
+            }
+            catch (Exception)
+            {
+                logger.Error("Error: invalid Sensor address");
                 return;
             }
 
@@ -133,12 +175,71 @@ namespace CameraTest
             info = String.Format("Bitrate set to {0} kHz", bitrate);
             logger.Info(info);
 
-            //blastBytes(deviceHandle, deviceAddress, filename);
-            button1.Text = "Close I2C Host Adapter";
+            byte[] dataOut = new byte[2];
+            dataOut[0] = 0x03;
+            dataOut[1] = 0xF8;
+            count = AardvarkApi.aa_i2c_write(deviceHandle,
+                                            i2cDesAddr,
+                                            AardvarkI2cFlags.AA_I2C_NO_FLAGS,
+                                            2,
+                                            dataOut);
+            if (count != 2)
+            {
+                info = String.Format("ERROR: error: only a partial number of bytes written - ({0}) instead of full (2)", count);
+                logger.Error(info);
+                return;
+            }
+
+            dataOut[0] = 0x05;
+            dataOut[1] = 0xAE;
+            count = AardvarkApi.aa_i2c_write(deviceHandle,
+                                            i2cDesAddr,
+                                            AardvarkI2cFlags.AA_I2C_NO_FLAGS,
+                                            2,
+                                            dataOut);
+            if (count != 2)
+            {
+                info = String.Format("ERROR: error: only a partial number of bytes written - ({0}) instead of full (2)", count);
+                logger.Error(info);
+                return;
+            }
+
+            dataOut[0] = 0x08;
+            dataOut[1] = 0x60;
+            count = AardvarkApi.aa_i2c_write(deviceHandle,
+                                            i2cDesAddr,
+                                            AardvarkI2cFlags.AA_I2C_NO_FLAGS,
+                                            2,
+                                            dataOut);
+            if (count != 2)
+            {
+                info = String.Format("ERROR: error: only a partial number of bytes written - ({0}) instead of full (2)", count);
+                logger.Error(info);
+                return;
+            }
+
+            dataOut[0] = 0x10;
+            dataOut[1] = 0x60;
+            count = AardvarkApi.aa_i2c_write(deviceHandle,
+                                            i2cDesAddr,
+                                            AardvarkI2cFlags.AA_I2C_NO_FLAGS,
+                                            2,
+                                            dataOut);
+            if (count != 2)
+            {
+                info = String.Format("ERROR: error: only a partial number of bytes written - ({0}) instead of full (2)", count);
+                logger.Error(info);
+                return;
+            }
+
+            logger.Info("SER-DES chain initialized");
+            button1.Text = "Close Host Adapter";
+            EnableControls(true);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            byte i2cAddr;
             int trans_num = 0;
             string info;
             byte[] dataOut = new byte[BUFFER_SIZE];
@@ -155,6 +256,38 @@ namespace CameraTest
                 {
                     info = String.Format("Unable to open file '{0}'", openFileDialog.FileName);
                     logger.Error(info);
+                    return;
+                }
+
+                // Parse the I2C address argument
+                try
+                {
+                    if (radioButtonDes.Checked == true)
+                    {
+                        if (textBoxAddress.Text.StartsWith("0x"))
+                        {
+                            i2cAddr = Convert.ToByte(textBoxAddress.Text.Substring(2), 16);
+                        }
+                        else
+                        {
+                            i2cAddr = Convert.ToByte(textBoxAddress.Text);
+                        }
+                    }
+                    else
+                    {
+                        if (textBoxI2CSensAddress.Text.StartsWith("0x"))
+                        {
+                            i2cAddr = Convert.ToByte(textBoxI2CSensAddress.Text.Substring(2), 16);
+                        }
+                        else
+                        {
+                            i2cAddr = Convert.ToByte(textBoxI2CSensAddress.Text);
+                        }
+                    }
+                }
+                catch (Exception)
+                {
+                    logger.Error("Error: invalid I2C address");
                     return;
                 }
 
@@ -180,8 +313,8 @@ namespace CameraTest
                     }
 
                     // Write the data to the bus
-                    count = AardvarkApi.aa_i2c_write(deviceHandle, 
-                                                     deviceAddress,
+                    count = AardvarkApi.aa_i2c_write(deviceHandle,
+                                                     i2cAddr,
                                                      AardvarkI2cFlags.AA_I2C_NO_FLAGS,
                                                      BUFFER_SIZE, dataOut);
                     if (count < 0)
@@ -243,6 +376,7 @@ namespace CameraTest
             ushort regAddress;
             ushort length;
             string info;
+            byte i2cAddr;
 
             try
             {
@@ -278,6 +412,38 @@ namespace CameraTest
                 return;
             }
 
+            // Parse the I2C address argument
+            try
+            {
+                if (radioButtonDes.Checked == true)
+                {
+                    if (textBoxAddress.Text.StartsWith("0x"))
+                    {
+                        i2cAddr = Convert.ToByte(textBoxAddress.Text.Substring(2), 16);
+                    }
+                    else
+                    {
+                        i2cAddr = Convert.ToByte(textBoxAddress.Text);
+                    }
+                }
+                else
+                {
+                    if (textBoxI2CSensAddress.Text.StartsWith("0x"))
+                    {
+                        i2cAddr = Convert.ToByte(textBoxI2CSensAddress.Text.Substring(2), 16);
+                    }
+                    else
+                    {
+                        i2cAddr = Convert.ToByte(textBoxI2CSensAddress.Text);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                logger.Error("Error: invalid I2C address");
+                return;
+            }
+
             int count, i;
             byte[] dataOut = new byte[2];
             byte[] dataIn = new byte[length];
@@ -296,14 +462,14 @@ namespace CameraTest
             
 
             // Write the address
-            AardvarkApi.aa_i2c_write(deviceHandle, 
-                                     deviceAddress,
+            AardvarkApi.aa_i2c_write(deviceHandle,
+                                     i2cAddr,
                                      AardvarkI2cFlags.AA_I2C_NO_STOP,
                                      addrLength, 
                                      dataOut);
 
             count = AardvarkApi.aa_i2c_read(deviceHandle,
-                                            deviceAddress,
+                                            i2cAddr,
                                             AardvarkI2cFlags.AA_I2C_NO_FLAGS,
                                             length, 
                                             dataIn);
@@ -349,6 +515,40 @@ namespace CameraTest
             byte regAddress;
             ushort length;
             string info;
+            byte i2cAddr;
+
+
+            // Parse the I2C address argument
+            try
+            {
+                if (radioButtonDes.Checked == true)
+                {
+                    if (textBoxAddress.Text.StartsWith("0x"))
+                    {
+                        i2cAddr = Convert.ToByte(textBoxAddress.Text.Substring(2), 16);
+                    }
+                    else
+                    {
+                        i2cAddr = Convert.ToByte(textBoxAddress.Text);
+                    }
+                }
+                else
+                {
+                    if (textBoxI2CSensAddress.Text.StartsWith("0x"))
+                    {
+                        i2cAddr = Convert.ToByte(textBoxI2CSensAddress.Text.Substring(2), 16);
+                    }
+                    else
+                    {
+                        i2cAddr = Convert.ToByte(textBoxI2CSensAddress.Text);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                logger.Error("Error: invalid I2C address");
+                return;
+            }
 
             try
             {
@@ -396,10 +596,10 @@ namespace CameraTest
             }
 
             count = AardvarkApi.aa_i2c_write(deviceHandle,
-                                            deviceAddress,
-                                            AardvarkI2cFlags.AA_I2C_NO_FLAGS,
-                                            length,
-                                            dataOut);
+                                             i2cAddr,
+                                             AardvarkI2cFlags.AA_I2C_NO_FLAGS,
+                                             length,
+                                             dataOut);
             if (count < 0)
             {
                 info = String.Format("ERROR: {0}\n", AardvarkApi.aa_status_string(count));
@@ -417,6 +617,216 @@ namespace CameraTest
                 info = String.Format("ERROR: written {0} bytes (expected {1})", count, length);
                 logger.Error(info);
             }
+        }
+
+        private void EnableControls(bool isTrue)
+        {
+            button2.Enabled = isTrue;
+            button3.Enabled = isTrue;
+            button4.Enabled = isTrue;
+            button5.Enabled = isTrue;
+        }
+
+        private void MenuClick(object sender, EventArgs e)
+        {
+            foreach (ToolStripMenuItem item in sensorCameraSettingsToolStripMenuItem.DropDownItems)
+            {
+                item.Checked = false;
+                cameraRes = CameraResolution.RESOLUTION_NONE;
+            }
+
+            ToolStripMenuItem item2 = (ToolStripMenuItem)sender;
+            if(item2.Text == "RESOLUTION_768_576")
+            {
+                item2.Checked = true;
+                cameraRes = CameraResolution.RESOLUTION_768_576;
+            }
+            else if (item2.Text == "RESOLUTION_768_576p30") 
+            {
+                item2.Checked = true;
+                cameraRes = CameraResolution.RESOLUTION_768_576p30;
+            }
+            else if (item2.Text == "RESOLUTION_768_576_DOWN")
+            {
+                item2.Checked = true;
+                cameraRes = CameraResolution.RESOLUTION_768_576_DOWN;
+            }
+            else if (item2.Text == "RESOLUTION_1280_800_p30_test_pattern")
+            {
+                item2.Checked = true;
+                cameraRes = CameraResolution.RESOLUTION_1280_800_p30_test_pattern;
+            }
+            else
+            {
+                logger.Info("Configuration table not available");
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            byte    i2cAddr;
+            int     count;
+            byte[]  dataOut = new byte[3];
+            string  info;
+
+            if(cameraRes == CameraResolution.RESOLUTION_NONE)
+            {
+                logger.Error("Configuration table not selected");
+                return;
+            }
+
+            // Parse the I2C address argument
+            try
+            {
+                if (textBoxI2CSensAddress.Text.StartsWith("0x"))
+                {
+                    i2cAddr = Convert.ToByte(textBoxI2CSensAddress.Text.Substring(2), 16);
+                }
+                else
+                {
+                    i2cAddr = Convert.ToByte(textBoxI2CSensAddress.Text);
+                }
+            }
+            catch (Exception)
+            {
+                logger.Error("ERROR: wrong Camera sensor address");
+                return;
+            }
+
+            if (cameraRes == CameraResolution.RESOLUTION_768_576)
+            {
+                for (int i = 0; i < CameraSettings.table_reg_ov_768_576.Length / 2; i++)
+                {
+                    dataOut[0] = (byte)((CameraSettings.table_reg_ov_768_576[i, 0] >> 8) & 0xFF);
+                    dataOut[1] = (byte)(CameraSettings.table_reg_ov_768_576[i, 0] & 0xFF);
+                    dataOut[2] = (byte)(CameraSettings.table_reg_ov_768_576[i, 1] & 0xFF);
+
+                    count = AardvarkApi.aa_i2c_write(deviceHandle,
+                                                     i2cAddr,
+                                                     AardvarkI2cFlags.AA_I2C_NO_FLAGS,
+                                                     3,
+                                                     dataOut);
+                    if (count < 0)
+                    {
+                        info = String.Format("ERROR: {0}\n", AardvarkApi.aa_status_string(count));
+                        logger.Error(info);
+                        return;
+                    }
+                    if (count == 0)
+                    {
+                        logger.Error("error: no bytes written");
+                        logger.Error("  are you sure you have the right slave address?");
+                        return;
+                    }
+                    else if (count != 3)
+                    {
+                        info = String.Format("ERROR: written {0} bytes (expected 3)", count);
+                        logger.Error(info);
+                        return;
+                    }
+                }
+            }
+            else if (cameraRes == CameraResolution.RESOLUTION_768_576p30)
+            {
+                for (int i = 0; i < CameraSettings.table_reg_ov_768_576_p30.Length / 2; i++)
+                {
+                    dataOut[0] = (byte)((CameraSettings.table_reg_ov_768_576_p30[i, 0] >> 8) & 0xFF);
+                    dataOut[1] = (byte)(CameraSettings.table_reg_ov_768_576_p30[i, 0] & 0xFF);
+                    dataOut[2] = (byte)(CameraSettings.table_reg_ov_768_576_p30[i, 1] & 0xFF);
+
+                    count = AardvarkApi.aa_i2c_write(deviceHandle,
+                                                     i2cAddr,
+                                                     AardvarkI2cFlags.AA_I2C_NO_FLAGS,
+                                                     3,
+                                                     dataOut);
+                    if (count < 0)
+                    {
+                        info = String.Format("ERROR: {0}\n", AardvarkApi.aa_status_string(count));
+                        logger.Error(info);
+                        return;
+                    }
+                    if (count == 0)
+                    {
+                        logger.Error("error: no bytes written");
+                        logger.Error("  are you sure you have the right slave address?");
+                        return;
+                    }
+                    else if (count != 3)
+                    {
+                        info = String.Format("ERROR: written {0} bytes (expected 3)", count);
+                        logger.Error(info);
+                        return;
+                    }
+                }
+            }
+            else if (cameraRes == CameraResolution.RESOLUTION_768_576_DOWN)
+            {
+                for (int i = 0; i < CameraSettings.table_reg_ov_768_576_down.Length / 2; i++)
+                {
+                    dataOut[0] = (byte)((CameraSettings.table_reg_ov_768_576_down[i, 0] >> 8) & 0xFF);
+                    dataOut[1] = (byte)(CameraSettings.table_reg_ov_768_576_down[i, 0] & 0xFF);
+                    dataOut[2] = (byte)(CameraSettings.table_reg_ov_768_576_down[i, 1] & 0xFF);
+
+                    count = AardvarkApi.aa_i2c_write(deviceHandle,
+                                                     i2cAddr,
+                                                     AardvarkI2cFlags.AA_I2C_NO_FLAGS,
+                                                     3,
+                                                     dataOut);
+                    if (count < 0)
+                    {
+                        info = String.Format("ERROR: {0}\n", AardvarkApi.aa_status_string(count));
+                        logger.Error(info);
+                        return;
+                    }
+                    if (count == 0)
+                    {
+                        logger.Error("error: no bytes written");
+                        logger.Error("  are you sure you have the right slave address?");
+                        return;
+                    }
+                    else if (count != 3)
+                    {
+                        info = String.Format("ERROR: written {0} bytes (expected 3)", count);
+                        logger.Error(info);
+                        return;
+                    }
+                }
+            }
+            else if (cameraRes == CameraResolution.RESOLUTION_1280_800_p30_test_pattern)
+            {
+                for (int i = 0; i < CameraSettings.table_reg_ov_1280_800_p30_test_pattern.Length / 2; i++)
+                {
+                    dataOut[0] = (byte)((CameraSettings.table_reg_ov_1280_800_p30_test_pattern[i, 0] >> 8) & 0xFF);
+                    dataOut[1] = (byte)(CameraSettings.table_reg_ov_1280_800_p30_test_pattern[i, 0] & 0xFF);
+                    dataOut[2] = (byte)(CameraSettings.table_reg_ov_1280_800_p30_test_pattern[i, 1] & 0xFF);
+
+                    count = AardvarkApi.aa_i2c_write(deviceHandle,
+                                                     i2cAddr,
+                                                     AardvarkI2cFlags.AA_I2C_NO_FLAGS,
+                                                     3,
+                                                     dataOut);
+                    if (count < 0)
+                    {
+                        info = String.Format("ERROR: {0}\n", AardvarkApi.aa_status_string(count));
+                        logger.Error(info);
+                        return;
+                    }
+                    if (count == 0)
+                    {
+                        logger.Error("error: no bytes written");
+                        logger.Error("  are you sure you have the right slave address?");
+                        return;
+                    }
+                    else if (count != 3)
+                    {
+                        info = String.Format("ERROR: written {0} bytes (expected 3)", count);
+                        logger.Error(info);
+                        return;
+                    }
+                }
+            }
+
+            logger.Info("New camera setting applied");
         }
 
     }

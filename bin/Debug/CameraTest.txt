@@ -1009,4 +1009,111 @@ Data read from device:
 Data read from device:
 2016-09-16 17:39:52,322 [9] INFO  CameraTest.CameraTestForm - 0x300a:  
 2016-09-16 17:39:52,322 [9] INFO  CameraTest.CameraTestForm - 0xa6 
+[Footer]\r\n[Header]\r\n[Footer]\r\n[Header]\r\n[Footer]\r\n[Header]\r\n2016-09-19 11:25:41,010 [8] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-19 11:25:41,245 [8] INFO  CameraTest.CameraTestForm - Bitrate set to 100 kHz
+[Header]\r\n2016-09-19 11:26:28,263 [10] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-19 11:26:28,466 [10] INFO  CameraTest.CameraTestForm - Bitrate set to 100 kHz
+2016-09-19 11:26:36,170 [10] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-19 11:26:36,498 [10] ERROR CameraTest.CameraTestForm - Unable to open Aardvark device on port 0
+2016-09-19 11:26:36,607 [10] ERROR CameraTest.CameraTestForm - ERROR: unable to open device
+[Footer]\r\n[Header]\r\n2016-09-19 11:29:24,462 [9] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-19 11:29:24,649 [9] INFO  CameraTest.CameraTestForm - Bitrate set to 100 kHz
+2016-09-19 11:29:24,649 [9] INFO  CameraTest.CameraTestForm - SER-DES chain initialized
+2016-09-19 11:29:27,743 [9] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-19 11:29:28,071 [9] ERROR CameraTest.CameraTestForm - Unable to open Aardvark device on port 0
+2016-09-19 11:29:28,071 [9] ERROR CameraTest.CameraTestForm - ERROR: unable to open device
+[Header]\r\n2016-09-19 11:30:52,852 [9] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-19 11:30:53,010 [9] INFO  CameraTest.CameraTestForm - Bitrate set to 100 kHz
+2016-09-19 11:30:53,015 [9] INFO  CameraTest.CameraTestForm - SER-DES chain initialized
+2016-09-19 11:30:57,918 [9] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-19 11:30:58,074 [9] INFO  CameraTest.CameraTestForm - Bitrate set to 100 kHz
+2016-09-19 11:30:58,074 [9] INFO  CameraTest.CameraTestForm - SER-DES chain initialized
+[Footer]\r\n[Header]\r\n2016-09-19 11:31:47,525 [9] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-19 11:31:47,697 [9] INFO  CameraTest.CameraTestForm - Bitrate set to 100 kHz
+2016-09-19 11:31:47,697 [9] INFO  CameraTest.CameraTestForm - SER-DES chain initialized
+2016-09-19 11:31:55,775 [9] ERROR CameraTest.CameraTestForm - ERROR: invalid length
+2016-09-19 11:31:58,853 [9] INFO  CameraTest.CameraTestForm - 
+Data read from device:
+2016-09-19 11:31:58,853 [9] INFO  CameraTest.CameraTestForm - 0x3007:  
+2016-09-19 11:31:58,853 [9] INFO  CameraTest.CameraTestForm - 0x00 
+2016-09-19 11:37:51,361 [9] INFO  CameraTest.CameraTestForm - 
+Data read from device:
+2016-09-19 11:37:51,361 [9] INFO  CameraTest.CameraTestForm - 0x300a:  
+2016-09-19 11:37:51,361 [9] INFO  CameraTest.CameraTestForm - 0x00 
+2016-09-19 11:37:51,361 [9] INFO  CameraTest.CameraTestForm - 0x10 
+2016-09-19 11:39:13,269 [9] INFO  CameraTest.CameraTestForm - 
+Data read from device:
+2016-09-19 11:39:13,269 [9] INFO  CameraTest.CameraTestForm - 0x3038:  
+2016-09-19 11:39:13,269 [9] INFO  CameraTest.CameraTestForm - 0x00 
+2016-09-19 11:39:13,269 [9] INFO  CameraTest.CameraTestForm - 0x10 
+2016-09-19 11:39:44,972 [9] INFO  CameraTest.CameraTestForm - 
+Data read from device:
+2016-09-19 11:39:44,972 [9] INFO  CameraTest.CameraTestForm - 0x00f0:  
+2016-09-19 11:39:44,972 [9] INFO  CameraTest.CameraTestForm - 0x5f 
+[Footer]\r\n[Header]\r\n[Footer]\r\n[Header]\r\n2016-09-19 11:58:54,568 [1] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-19 11:58:54,756 [1] INFO  CameraTest.CameraTestForm - Bitrate set to 100 kHz
+2016-09-19 11:58:54,756 [1] INFO  CameraTest.CameraTestForm - SER-DES chain initialized
+2016-09-19 11:59:21,756 [1] INFO  CameraTest.CameraTestForm - 
+Data read from device:
+2016-09-19 11:59:21,756 [1] INFO  CameraTest.CameraTestForm - 0x3007:  
+2016-09-19 11:59:21,756 [1] INFO  CameraTest.CameraTestForm - 0x01 
+2016-09-19 11:59:48,756 [1] INFO  CameraTest.CameraTestForm - 
+Data read from device:
+2016-09-19 11:59:48,756 [1] INFO  CameraTest.CameraTestForm - 0x3005:  
+2016-09-19 11:59:48,756 [1] INFO  CameraTest.CameraTestForm - 0x20 
+2016-09-19 12:00:13,194 [1] INFO  CameraTest.CameraTestForm - 
+Data read from device:
+2016-09-19 12:00:13,194 [1] INFO  CameraTest.CameraTestForm - 0x3003:  
+2016-09-19 12:00:13,194 [1] INFO  CameraTest.CameraTestForm - 0x20 
+2016-09-19 12:00:13,194 [1] INFO  CameraTest.CameraTestForm - 0x00 
+2016-09-19 12:00:13,194 [1] INFO  CameraTest.CameraTestForm - 0x20 
+2016-09-19 12:00:13,194 [1] INFO  CameraTest.CameraTestForm - 0x00 
+2016-09-19 12:00:13,194 [1] INFO  CameraTest.CameraTestForm - 0x01 
+2016-09-19 12:00:25,241 [1] INFO  CameraTest.CameraTestForm - Port closed
+[Footer]\r\n[Header]\r\n2016-09-19 12:04:42,240 [1] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-19 12:04:42,412 [1] INFO  CameraTest.CameraTestForm - Bitrate set to 100 kHz
+2016-09-19 12:04:42,412 [1] INFO  CameraTest.CameraTestForm - SER-DES chain initialized
+[Footer]\r\n[Header]\r\n[Footer]\r\n[Header]\r\n[Footer]\r\n[Header]\r\n[Footer]\r\n[Header]\r\n[Footer]\r\n[Header]\r\n[Footer]\r\n[Header]\r\n2016-09-19 14:01:38,747 [1] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-19 14:01:39,005 [1] INFO  CameraTest.CameraTestForm - Bitrate set to 100 kHz
+2016-09-19 14:01:39,008 [1] INFO  CameraTest.CameraTestForm - SER-DES chain initialized
+2016-09-19 14:01:39,221 [1] INFO  CameraTest.CameraTestForm - Port closed
+2016-09-19 14:01:45,039 [1] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-19 14:01:45,172 [1] INFO  CameraTest.CameraTestForm - Bitrate set to 100 kHz
+2016-09-19 14:01:45,174 [1] INFO  CameraTest.CameraTestForm - SER-DES chain initialized
+[Header]\r\n[Footer]\r\n[Header]\r\n[Footer]\r\n[Header]\r\n[Footer]\r\n[Header]\r\n[Footer]\r\n[Header]\r\n[Footer]\r\n[Header]\r\n[Footer]\r\n[Header]\r\n[Footer]\r\n[Header]\r\n[Footer]\r\n[Header]\r\n[Footer]\r\n[Header]\r\n2016-09-19 17:43:03,740 [1] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-19 17:43:03,890 [1] INFO  CameraTest.CameraTestForm - Bitrate set to 100 kHz
+2016-09-19 17:43:03,891 [1] ERROR CameraTest.CameraTestForm - ERROR: error: only a partial number of bytes written - (0) instead of full (2)
+2016-09-19 17:43:13,792 [1] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-19 17:43:14,064 [1] ERROR CameraTest.CameraTestForm - Unable to open Aardvark device on port 0
+2016-09-19 17:43:14,065 [1] ERROR CameraTest.CameraTestForm - ERROR: unable to open device
+2016-09-19 17:43:16,895 [1] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-19 17:43:17,167 [1] ERROR CameraTest.CameraTestForm - Unable to open Aardvark device on port 0
+2016-09-19 17:43:17,167 [1] ERROR CameraTest.CameraTestForm - ERROR: unable to open device
+[Footer]\r\n[Header]\r\n2016-09-19 17:43:31,821 [1] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-19 17:43:31,972 [1] INFO  CameraTest.CameraTestForm - Bitrate set to 100 kHz
+2016-09-19 17:43:31,974 [1] ERROR CameraTest.CameraTestForm - ERROR: error: only a partial number of bytes written - (0) instead of full (2)
+[Footer]\r\n[Header]\r\n[Footer]\r\n[Header]\r\n2016-09-19 17:44:37,244 [1] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-19 17:44:37,403 [1] INFO  CameraTest.CameraTestForm - Bitrate set to 100 kHz
+2016-09-19 17:44:37,406 [1] INFO  CameraTest.CameraTestForm - SER-DES chain initialized
+[Footer]\r\n[Header]\r\n2016-09-19 17:50:08,907 [1] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-19 17:50:09,058 [1] INFO  CameraTest.CameraTestForm - Bitrate set to 100 kHz
+2016-09-19 17:50:09,061 [1] INFO  CameraTest.CameraTestForm - SER-DES chain initialized
+2016-09-19 17:50:11,374 [1] INFO  CameraTest.CameraTestForm - Port closed
+2016-09-19 17:50:13,936 [1] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-19 17:50:14,068 [1] INFO  CameraTest.CameraTestForm - Bitrate set to 100 kHz
+2016-09-19 17:50:14,071 [1] INFO  CameraTest.CameraTestForm - SER-DES chain initialized
+[Header]\r\n2016-09-19 17:58:00,232 [1] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-19 17:58:00,384 [1] INFO  CameraTest.CameraTestForm - Bitrate set to 100 kHz
+2016-09-19 17:58:00,387 [1] INFO  CameraTest.CameraTestForm - SER-DES chain initialized
+[Header]\r\n2016-09-19 17:58:39,562 [1] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-19 17:58:39,712 [1] INFO  CameraTest.CameraTestForm - Bitrate set to 100 kHz
+2016-09-19 17:58:39,716 [1] INFO  CameraTest.CameraTestForm - SER-DES chain initialized
+2016-09-19 17:58:51,991 [1] ERROR CameraTest.CameraTestForm - Configuration table not selected
+2016-09-19 17:59:18,135 [1] INFO  CameraTest.CameraTestForm - Port closed
+[Footer]\r\n[Header]\r\n2016-09-19 18:00:17,755 [1] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-19 18:00:17,909 [1] INFO  CameraTest.CameraTestForm - Bitrate set to 100 kHz
+2016-09-19 18:00:17,912 [1] INFO  CameraTest.CameraTestForm - SER-DES chain initialized
+2016-09-19 18:00:22,818 [1] INFO  CameraTest.CameraTestForm - New camera setting applied
+2016-09-19 18:05:49,208 [1] INFO  CameraTest.CameraTestForm - New camera setting applied
+2016-09-19 18:06:38,639 [1] INFO  CameraTest.CameraTestForm - New camera setting applied
 [Footer]\r\n
