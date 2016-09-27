@@ -1116,4 +1116,266 @@ Data read from device:
 2016-09-19 18:00:22,818 [1] INFO  CameraTest.CameraTestForm - New camera setting applied
 2016-09-19 18:05:49,208 [1] INFO  CameraTest.CameraTestForm - New camera setting applied
 2016-09-19 18:06:38,639 [1] INFO  CameraTest.CameraTestForm - New camera setting applied
+[Footer]\r\n[Header]\r\n2016-09-20 10:15:22,242 [10] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-20 10:15:22,511 [10] INFO  CameraTest.CameraTestForm - Bitrate set to 100 kHz
+2016-09-20 10:15:22,511 [10] ERROR CameraTest.CameraTestForm - ERROR: error: only a partial number of bytes written - (0) instead of full (2)
+[Footer]\r\n[Header]\r\n2016-09-20 10:16:03,114 [9] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-20 10:16:03,281 [9] INFO  CameraTest.CameraTestForm - Bitrate set to 100 kHz
+2016-09-20 10:16:03,286 [9] INFO  CameraTest.CameraTestForm - SER-DES chain initialized
+2016-09-20 10:16:19,210 [9] INFO  CameraTest.CameraTestForm - New camera setting applied
+2016-09-20 10:16:57,583 [9] INFO  CameraTest.CameraTestForm - Port closed
+[Footer]\r\n[Header]\r\n2016-09-20 10:22:07,579 [8] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-20 10:22:07,758 [8] INFO  CameraTest.CameraTestForm - Bitrate set to 100 kHz
+2016-09-20 10:22:07,758 [8] INFO  CameraTest.CameraTestForm - SER-DES chain initialized
+2016-09-20 10:22:17,149 [8] INFO  CameraTest.CameraTestForm - Configuration table not available
+2016-09-20 10:22:40,582 [8] INFO  CameraTest.CameraTestForm - New camera setting applied
+2016-09-20 10:23:04,714 [8] INFO  CameraTest.CameraTestForm - Port closed
+[Footer]\r\n[Header]\r\n2016-09-20 10:27:33,894 [9] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-20 10:27:34,045 [9] INFO  CameraTest.CameraTestForm - Bitrate set to 100 kHz
+2016-09-20 10:27:34,050 [9] INFO  CameraTest.CameraTestForm - SER-DES chain initialized
+2016-09-20 10:27:39,772 [9] INFO  CameraTest.CameraTestForm - New camera setting applied
+2016-09-20 10:27:57,126 [9] INFO  CameraTest.CameraTestForm - Port closed
+[Footer]\r\n[Header]\r\n2016-09-20 11:06:24,493 [9] FATAL CameraTest.CameraTestForm - Device not found
+2016-09-20 11:06:32,830 [9] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-20 11:06:32,970 [9] INFO  CameraTest.CameraTestForm - Bitrate set to 100 kHz
+2016-09-20 11:06:32,975 [9] INFO  CameraTest.CameraTestForm - SER-DES chain initialized
+[Header]\r\n2016-09-20 11:33:07,271 [9] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-20 11:33:07,426 [9] INFO  CameraTest.CameraTestForm - Bitrate set to 100 kHz
+2016-09-20 11:33:07,429 [9] INFO  CameraTest.CameraTestForm - SER-DES chain initialized
+2016-09-20 11:33:12,572 [9] INFO  CameraTest.CameraTestForm - Configuration table not available
+2016-09-20 11:33:20,469 [9] ERROR CameraTest.CameraTestForm - error: no bytes written
+2016-09-20 11:33:20,469 [9] ERROR CameraTest.CameraTestForm -   are you sure you have the right slave address?
+2016-09-20 11:33:26,332 [9] INFO  CameraTest.CameraTestForm - Port closed
+2016-09-20 11:33:30,741 [9] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-20 11:33:30,873 [9] INFO  CameraTest.CameraTestForm - Bitrate set to 100 kHz
+2016-09-20 11:33:30,876 [9] INFO  CameraTest.CameraTestForm - SER-DES chain initialized
+2016-09-20 11:33:40,455 [9] ERROR CameraTest.CameraTestForm - error: no bytes written
+2016-09-20 11:33:40,455 [9] ERROR CameraTest.CameraTestForm -   are you sure you have the right slave address?
+2016-09-20 11:33:46,919 [9] ERROR CameraTest.CameraTestForm - error: no bytes written
+2016-09-20 11:33:46,919 [9] ERROR CameraTest.CameraTestForm -   are you sure you have the right slave address?
+2016-09-20 11:33:57,371 [9] INFO  CameraTest.CameraTestForm - Configuration table not available
+2016-09-20 11:34:02,543 [9] ERROR CameraTest.CameraTestForm - error: no bytes written
+2016-09-20 11:34:02,543 [9] ERROR CameraTest.CameraTestForm -   are you sure you have the right slave address?
+2016-09-20 11:34:30,266 [9] INFO  CameraTest.CameraTestForm - Port closed
+2016-09-20 11:34:31,548 [9] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-20 11:34:31,681 [9] INFO  CameraTest.CameraTestForm - Bitrate set to 100 kHz
+2016-09-20 11:34:31,684 [9] INFO  CameraTest.CameraTestForm - SER-DES chain initialized
+2016-09-20 11:34:39,817 [9] ERROR CameraTest.CameraTestForm - error: no bytes written
+2016-09-20 11:34:39,817 [9] ERROR CameraTest.CameraTestForm -   are you sure you have the right slave address?
+2016-09-20 11:34:51,902 [9] ERROR CameraTest.CameraTestForm - error: no bytes written
+2016-09-20 11:34:51,902 [9] ERROR CameraTest.CameraTestForm -   are you sure you have the right slave address?
+2016-09-20 11:34:56,499 [9] INFO  CameraTest.CameraTestForm - Port closed
+2016-09-20 11:35:29,347 [9] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-20 11:35:29,481 [9] INFO  CameraTest.CameraTestForm - Bitrate set to 100 kHz
+2016-09-20 11:35:29,483 [9] INFO  CameraTest.CameraTestForm - SER-DES chain initialized
+2016-09-20 11:36:03,586 [9] INFO  CameraTest.CameraTestForm - Port closed
+2016-09-20 11:36:25,995 [9] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-20 11:36:26,128 [9] INFO  CameraTest.CameraTestForm - Bitrate set to 100 kHz
+2016-09-20 11:36:26,131 [9] INFO  CameraTest.CameraTestForm - SER-DES chain initialized
+2016-09-20 11:37:22,647 [9] ERROR CameraTest.CameraTestForm - error: no bytes written
+2016-09-20 11:37:22,647 [9] ERROR CameraTest.CameraTestForm -   are you sure you have the right slave address?
+2016-09-20 11:37:53,529 [9] INFO  CameraTest.CameraTestForm - Port closed
+2016-09-20 11:46:08,084 [9] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-20 11:46:08,216 [9] INFO  CameraTest.CameraTestForm - Bitrate set to 100 kHz
+2016-09-20 11:46:08,219 [9] INFO  CameraTest.CameraTestForm - SER-DES chain initialized
+2016-09-20 11:46:18,898 [9] ERROR CameraTest.CameraTestForm - error: no bytes written
+2016-09-20 11:46:18,898 [9] ERROR CameraTest.CameraTestForm -   are you sure you have the right slave address?
+2016-09-20 11:46:36,165 [9] ERROR CameraTest.CameraTestForm - ERROR: invalid regAddress addr
+2016-09-20 11:46:37,518 [9] ERROR CameraTest.CameraTestForm - ERROR: invalid regAddress addr
+2016-09-20 11:46:40,238 [9] ERROR CameraTest.CameraTestForm - ERROR: invalid length
+2016-09-20 11:46:43,439 [9] ERROR CameraTest.CameraTestForm - error: no bytes read
+2016-09-20 11:46:43,439 [9] ERROR CameraTest.CameraTestForm -   are you sure you have the right slave address?
+2016-09-20 11:46:51,446 [9] ERROR CameraTest.CameraTestForm - error: no bytes read
+2016-09-20 11:46:51,446 [9] ERROR CameraTest.CameraTestForm -   are you sure you have the right slave address?
+2016-09-20 11:47:37,801 [9] INFO  CameraTest.CameraTestForm - Port closed
+2016-09-20 11:47:38,611 [9] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-20 11:47:38,743 [9] INFO  CameraTest.CameraTestForm - Bitrate set to 100 kHz
+2016-09-20 11:47:38,746 [9] INFO  CameraTest.CameraTestForm - SER-DES chain initialized
+2016-09-20 11:47:45,351 [9] INFO  CameraTest.CameraTestForm - 
+Data read from device:
+2016-09-20 11:47:45,351 [9] INFO  CameraTest.CameraTestForm - 0x3007:  
+2016-09-20 11:47:45,351 [9] INFO  CameraTest.CameraTestForm - 0x01 
+2016-09-20 11:47:48,799 [9] INFO  CameraTest.CameraTestForm - 
+Data read from device:
+2016-09-20 11:47:48,799 [9] INFO  CameraTest.CameraTestForm - 0x3007:  
+2016-09-20 11:47:48,799 [9] INFO  CameraTest.CameraTestForm - 0x01 
+2016-09-20 11:47:59,058 [9] INFO  CameraTest.CameraTestForm - New camera setting applied
+2016-09-20 11:49:43,232 [9] INFO  CameraTest.CameraTestForm - Port closed
+2016-09-20 11:52:06,904 [9] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-20 11:52:07,036 [9] INFO  CameraTest.CameraTestForm - Bitrate set to 100 kHz
+2016-09-20 11:52:07,039 [9] INFO  CameraTest.CameraTestForm - SER-DES chain initialized
+2016-09-20 11:52:16,931 [9] ERROR CameraTest.CameraTestForm - error: no bytes written
+2016-09-20 11:52:16,931 [9] ERROR CameraTest.CameraTestForm -   are you sure you have the right slave address?
+2016-09-20 11:52:27,522 [9] ERROR CameraTest.CameraTestForm - error: no bytes written
+2016-09-20 11:52:27,522 [9] ERROR CameraTest.CameraTestForm -   are you sure you have the right slave address?
+2016-09-20 11:52:42,534 [9] INFO  CameraTest.CameraTestForm - Port closed
+2016-09-20 11:54:16,789 [9] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-20 11:54:16,921 [9] INFO  CameraTest.CameraTestForm - Bitrate set to 100 kHz
+2016-09-20 11:54:16,924 [9] INFO  CameraTest.CameraTestForm - SER-DES chain initialized
+2016-09-20 11:54:21,681 [9] INFO  CameraTest.CameraTestForm - 
+Data read from device:
+2016-09-20 11:54:21,681 [9] INFO  CameraTest.CameraTestForm - 0x3007:  
+2016-09-20 11:54:21,681 [9] INFO  CameraTest.CameraTestForm - 0x01 
+2016-09-20 11:54:28,115 [9] ERROR CameraTest.CameraTestForm - error: no bytes written
+2016-09-20 11:54:28,115 [9] ERROR CameraTest.CameraTestForm -   are you sure you have the right slave address?
+2016-09-20 11:54:33,904 [9] ERROR CameraTest.CameraTestForm - error: no bytes read
+2016-09-20 11:54:33,904 [9] ERROR CameraTest.CameraTestForm -   are you sure you have the right slave address?
+2016-09-20 11:54:34,928 [9] ERROR CameraTest.CameraTestForm - error: no bytes read
+2016-09-20 11:54:34,928 [9] ERROR CameraTest.CameraTestForm -   are you sure you have the right slave address?
+2016-09-20 11:55:30,152 [9] ERROR CameraTest.CameraTestForm - error: no bytes read
+2016-09-20 11:55:30,152 [9] ERROR CameraTest.CameraTestForm -   are you sure you have the right slave address?
+2016-09-20 11:55:31,564 [9] INFO  CameraTest.CameraTestForm - Port closed
+2016-09-20 11:55:32,980 [9] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-20 11:55:33,116 [9] INFO  CameraTest.CameraTestForm - Bitrate set to 100 kHz
+2016-09-20 11:55:33,119 [9] INFO  CameraTest.CameraTestForm - SER-DES chain initialized
+2016-09-20 11:55:35,992 [9] ERROR CameraTest.CameraTestForm - error: no bytes read
+2016-09-20 11:55:35,993 [9] ERROR CameraTest.CameraTestForm -   are you sure you have the right slave address?
+2016-09-20 12:00:29,721 [9] INFO  CameraTest.CameraTestForm - Port closed
+[Footer]\r\n[Header]\r\n2016-09-20 12:04:38,754 [9] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-20 12:04:38,906 [9] INFO  CameraTest.CameraTestForm - Bitrate set to 100 kHz
+2016-09-20 12:04:38,910 [9] INFO  CameraTest.CameraTestForm - SER-DES chain initialized
+2016-09-20 12:04:46,564 [9] INFO  CameraTest.CameraTestForm - 
+Data read from device:
+2016-09-20 12:04:46,564 [9] INFO  CameraTest.CameraTestForm - 0x3007:  
+2016-09-20 12:04:46,564 [9] INFO  CameraTest.CameraTestForm - 0x00 
+2016-09-20 12:04:51,922 [9] INFO  CameraTest.CameraTestForm - 
+Data read from device:
+2016-09-20 12:04:51,922 [9] INFO  CameraTest.CameraTestForm - 0x3008:  
+2016-09-20 12:04:51,922 [9] INFO  CameraTest.CameraTestForm - 0x00 
+2016-09-20 12:05:04,314 [9] INFO  CameraTest.CameraTestForm - 
+Data read from device:
+2016-09-20 12:05:04,314 [9] INFO  CameraTest.CameraTestForm - 0x3008:  
+2016-09-20 12:05:04,314 [9] INFO  CameraTest.CameraTestForm - 0x00 
+2016-09-20 12:05:04,314 [9] INFO  CameraTest.CameraTestForm - 0x10 
+2016-09-20 12:05:04,314 [9] INFO  CameraTest.CameraTestForm - 0x25 
+2016-09-20 12:05:04,314 [9] INFO  CameraTest.CameraTestForm - 0xfa 
+2016-09-20 12:05:04,314 [9] INFO  CameraTest.CameraTestForm - 0x00 
+2016-09-20 12:05:04,314 [9] INFO  CameraTest.CameraTestForm - 0x00 
+2016-09-20 12:05:04,314 [9] INFO  CameraTest.CameraTestForm - 0x00 
+2016-09-20 12:05:04,314 [9] INFO  CameraTest.CameraTestForm - 0x00 
+2016-09-20 12:05:04,315 [9] ERROR CameraTest.CameraTestForm -  
+2016-09-20 12:05:04,315 [9] INFO  CameraTest.CameraTestForm - 0x00 
+2016-09-20 12:05:04,315 [9] INFO  CameraTest.CameraTestForm - 0x00 
+2016-09-20 12:05:28,521 [9] ERROR CameraTest.CameraTestForm - error: no bytes read
+2016-09-20 12:05:28,521 [9] ERROR CameraTest.CameraTestForm -   are you sure you have the right slave address?
+2016-09-20 12:05:47,649 [9] ERROR CameraTest.CameraTestForm - error: no bytes read
+2016-09-20 12:05:47,649 [9] ERROR CameraTest.CameraTestForm -   are you sure you have the right slave address?
+2016-09-20 12:05:50,749 [9] INFO  CameraTest.CameraTestForm - Port closed
+2016-09-20 12:06:21,231 [9] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-20 12:06:21,363 [9] INFO  CameraTest.CameraTestForm - Bitrate set to 100 kHz
+2016-09-20 12:06:21,367 [9] INFO  CameraTest.CameraTestForm - SER-DES chain initialized
+2016-09-20 12:06:25,660 [9] INFO  CameraTest.CameraTestForm - 
+Data read from device:
+2016-09-20 12:06:25,660 [9] INFO  CameraTest.CameraTestForm - 0x3007:  
+2016-09-20 12:06:25,660 [9] INFO  CameraTest.CameraTestForm - 0x01 
+2016-09-20 12:06:25,660 [9] INFO  CameraTest.CameraTestForm - 0x00 
+2016-09-20 12:06:25,660 [9] INFO  CameraTest.CameraTestForm - 0x00 
+2016-09-20 12:06:25,660 [9] INFO  CameraTest.CameraTestForm - 0xa6 
+2016-09-20 12:06:25,660 [9] INFO  CameraTest.CameraTestForm - 0x35 
+2016-09-20 12:06:25,660 [9] INFO  CameraTest.CameraTestForm - 0x60 
+2016-09-20 12:06:25,660 [9] INFO  CameraTest.CameraTestForm - 0x00 
+2016-09-20 12:06:25,660 [9] INFO  CameraTest.CameraTestForm - 0x00 
+2016-09-20 12:06:25,660 [9] ERROR CameraTest.CameraTestForm -  
+2016-09-20 12:06:25,660 [9] INFO  CameraTest.CameraTestForm - 0x00 
+2016-09-20 12:06:25,660 [9] INFO  CameraTest.CameraTestForm - 0x00 
+2016-09-20 12:06:47,200 [9] ERROR CameraTest.CameraTestForm - error: no bytes written
+2016-09-20 12:06:47,201 [9] ERROR CameraTest.CameraTestForm -   are you sure you have the right slave address?
+2016-09-20 12:06:59,119 [9] ERROR CameraTest.CameraTestForm - error: no bytes read
+2016-09-20 12:06:59,120 [9] ERROR CameraTest.CameraTestForm -   are you sure you have the right slave address?
+2016-09-20 12:07:03,492 [9] INFO  CameraTest.CameraTestForm - Port closed
+2016-09-20 12:07:06,038 [9] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-20 12:07:06,170 [9] INFO  CameraTest.CameraTestForm - Bitrate set to 100 kHz
+2016-09-20 12:07:06,174 [9] INFO  CameraTest.CameraTestForm - SER-DES chain initialized
+2016-09-20 12:07:09,039 [9] ERROR CameraTest.CameraTestForm - error: no bytes read
+2016-09-20 12:07:09,039 [9] ERROR CameraTest.CameraTestForm -   are you sure you have the right slave address?
+[Footer]\r\n[Header]\r\n2016-09-20 12:17:46,243 [9] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-20 12:17:46,395 [9] INFO  CameraTest.CameraTestForm - Bitrate set to 100 kHz
+2016-09-20 12:17:46,399 [9] INFO  CameraTest.CameraTestForm - SER-DES chain initialized
+2016-09-20 12:17:52,248 [9] INFO  CameraTest.CameraTestForm - Configuration table not available
+2016-09-20 12:17:59,210 [9] INFO  CameraTest.CameraTestForm - New camera setting applied
+2016-09-20 12:18:08,206 [9] INFO  CameraTest.CameraTestForm - Configuration table not available
+2016-09-20 12:18:12,143 [9] INFO  CameraTest.CameraTestForm - Configuration table not available
+2016-09-20 12:18:16,171 [9] INFO  CameraTest.CameraTestForm - Configuration table not available
+2016-09-20 12:18:29,556 [9] INFO  CameraTest.CameraTestForm - Configuration table not available
+2016-09-20 12:18:31,947 [9] INFO  CameraTest.CameraTestForm - Configuration table not available
+2016-09-20 12:18:46,747 [9] ERROR CameraTest.CameraTestForm - error: no bytes written
+2016-09-20 12:18:46,747 [9] ERROR CameraTest.CameraTestForm -   are you sure you have the right slave address?
+2016-09-20 12:21:03,301 [9] INFO  CameraTest.CameraTestForm - Port closed
+[Footer]\r\n[Header]\r\n2016-09-20 12:30:45,559 [9] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-20 12:30:45,708 [9] INFO  CameraTest.CameraTestForm - Bitrate set to 100 kHz
+2016-09-20 12:30:45,711 [9] INFO  CameraTest.CameraTestForm - SER-DES chain initialized
+2016-09-20 12:30:51,789 [9] ERROR CameraTest.CameraTestForm - error: no bytes written
+2016-09-20 12:30:51,789 [9] ERROR CameraTest.CameraTestForm -   are you sure you have the right slave address?
+2016-09-20 12:30:59,438 [9] INFO  CameraTest.CameraTestForm - Port closed
+2016-09-20 12:31:19,759 [9] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-20 12:31:19,892 [9] INFO  CameraTest.CameraTestForm - Bitrate set to 100 kHz
+2016-09-20 12:31:19,895 [9] INFO  CameraTest.CameraTestForm - SER-DES chain initialized
+2016-09-20 12:31:32,376 [9] ERROR CameraTest.CameraTestForm - ERROR: invalid length
+2016-09-20 12:31:35,404 [9] INFO  CameraTest.CameraTestForm - 
+Data read from device:
+2016-09-20 12:31:35,404 [9] INFO  CameraTest.CameraTestForm - 0x3007:  
+2016-09-20 12:31:35,404 [9] INFO  CameraTest.CameraTestForm - 0x01 
+2016-09-20 12:31:39,565 [9] INFO  CameraTest.CameraTestForm - New camera setting applied
+2016-09-20 12:33:46,157 [9] INFO  CameraTest.CameraTestForm - Port closed
+2016-09-20 12:41:57,907 [9] FATAL CameraTest.CameraTestForm - Device not found
+[Footer]\r\n[Header]\r\n2016-09-22 10:55:35,851 [9] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-22 10:55:36,093 [9] INFO  CameraTest.CameraTestForm - Bitrate set to 100 kHz
+2016-09-22 10:55:36,096 [9] INFO  CameraTest.CameraTestForm - SER-DES chain initialized
+2016-09-22 10:55:46,099 [9] INFO  CameraTest.CameraTestForm - Configuration table not available
+2016-09-22 10:55:51,463 [9] ERROR CameraTest.CameraTestForm - error: no bytes written
+2016-09-22 10:55:51,463 [9] ERROR CameraTest.CameraTestForm -   are you sure you have the right slave address?
+2016-09-22 10:56:06,379 [9] ERROR CameraTest.CameraTestForm - error: no bytes read
+2016-09-22 10:56:06,380 [9] ERROR CameraTest.CameraTestForm -   are you sure you have the right slave address?
+2016-09-22 11:05:26,340 [9] INFO  CameraTest.CameraTestForm - Port closed
+2016-09-22 11:05:28,220 [9] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-22 11:05:28,355 [9] INFO  CameraTest.CameraTestForm - Bitrate set to 100 kHz
+2016-09-22 11:05:28,358 [9] INFO  CameraTest.CameraTestForm - SER-DES chain initialized
+2016-09-22 11:05:41,627 [9] INFO  CameraTest.CameraTestForm - New camera setting applied
+2016-09-22 11:10:38,391 [9] INFO  CameraTest.CameraTestForm - Configuration table not available
+2016-09-22 11:10:59,824 [9] INFO  CameraTest.CameraTestForm - New camera setting applied
+2016-09-22 11:30:53,566 [9] INFO  CameraTest.CameraTestForm - New camera setting applied
+2016-09-22 11:32:02,086 [9] INFO  CameraTest.CameraTestForm - New camera setting applied
+2016-09-22 11:32:43,003 [9] INFO  CameraTest.CameraTestForm - New camera setting applied
+2016-09-22 12:20:57,226 [9] INFO  CameraTest.CameraTestForm - Configuration table not available
+[Footer]\r\n[Header]\r\n2016-09-22 12:28:46,575 [9] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-22 12:28:46,739 [9] INFO  CameraTest.CameraTestForm - Bitrate set to 100 kHz
+2016-09-22 12:28:46,743 [9] INFO  CameraTest.CameraTestForm - SER-DES chain initialized
+2016-09-22 12:30:46,026 [9] INFO  CameraTest.CameraTestForm - New camera setting applied
+2016-09-22 12:31:08,691 [9] INFO  CameraTest.CameraTestForm - New camera setting applied
+2016-09-22 12:31:18,573 [9] INFO  CameraTest.CameraTestForm - New camera setting applied
+2016-09-22 12:31:36,072 [9] INFO  CameraTest.CameraTestForm - New camera setting applied
+2016-09-22 12:31:42,810 [9] INFO  CameraTest.CameraTestForm - New camera setting applied
+2016-09-22 12:31:58,722 [9] INFO  CameraTest.CameraTestForm - New camera setting applied
+[Header]\r\n2016-09-22 12:32:23,899 [9] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-22 12:32:24,061 [9] INFO  CameraTest.CameraTestForm - Bitrate set to 100 kHz
+2016-09-22 12:32:24,064 [9] INFO  CameraTest.CameraTestForm - SER-DES chain initialized
+2016-09-22 12:32:34,752 [9] INFO  CameraTest.CameraTestForm - New camera setting applied
+2016-09-22 14:31:28,458 [9] ERROR CameraTest.CameraTestForm - error: no bytes written
+2016-09-22 14:31:28,504 [9] ERROR CameraTest.CameraTestForm -   are you sure you have the right slave address?
+2016-09-22 14:31:28,582 [9] ERROR CameraTest.CameraTestForm - error: no bytes written
+2016-09-22 14:31:28,582 [9] ERROR CameraTest.CameraTestForm -   are you sure you have the right slave address?
+2016-09-22 14:34:32,874 [9] INFO  CameraTest.CameraTestForm - Port closed
+2016-09-22 14:34:33,563 [9] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-22 14:34:33,695 [9] INFO  CameraTest.CameraTestForm - Bitrate set to 100 kHz
+2016-09-22 14:34:33,697 [9] INFO  CameraTest.CameraTestForm - SER-DES chain initialized
+2016-09-22 14:34:44,765 [9] INFO  CameraTest.CameraTestForm - New camera setting applied
+2016-09-22 14:43:59,425 [9] INFO  CameraTest.CameraTestForm - New camera setting applied
+2016-09-22 14:49:49,179 [9] INFO  CameraTest.CameraTestForm - New camera setting applied
+2016-09-22 14:54:50,718 [9] INFO  CameraTest.CameraTestForm - Port closed
+2016-09-22 14:54:51,824 [9] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-22 14:54:51,958 [9] INFO  CameraTest.CameraTestForm - Bitrate set to 100 kHz
+2016-09-22 14:54:51,960 [9] INFO  CameraTest.CameraTestForm - SER-DES chain initialized
+2016-09-22 14:55:01,583 [9] ERROR CameraTest.CameraTestForm - error: no bytes read
+2016-09-22 14:55:01,583 [9] ERROR CameraTest.CameraTestForm -   are you sure you have the right slave address?
+2016-09-22 14:55:04,155 [9] ERROR CameraTest.CameraTestForm - error: no bytes read
+2016-09-22 14:55:04,155 [9] ERROR CameraTest.CameraTestForm -   are you sure you have the right slave address?
+2016-09-22 15:14:03,994 [9] INFO  CameraTest.CameraTestForm - New camera setting applied
+2016-09-22 15:27:43,314 [9] INFO  CameraTest.CameraTestForm - New camera setting applied
+2016-09-22 15:30:30,293 [9] INFO  CameraTest.CameraTestForm - New camera setting applied
+2016-09-22 16:05:47,178 [9] INFO  CameraTest.CameraTestForm - New camera setting applied
+[Header]\r\n2016-09-27 11:02:31,032 [9] INFO  CameraTest.CameraTestForm - Found 1 devices
+2016-09-27 11:02:31,334 [9] INFO  CameraTest.CameraTestForm - Bitrate set to 100 kHz
+2016-09-27 11:02:31,338 [9] INFO  CameraTest.CameraTestForm - SER-DES chain initialized
+2016-09-27 11:02:41,457 [9] INFO  CameraTest.CameraTestForm - New camera setting applied
+2016-09-27 11:08:53,509 [9] INFO  CameraTest.CameraTestForm - Port closed
 [Footer]\r\n

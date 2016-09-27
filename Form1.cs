@@ -656,6 +656,21 @@ namespace CameraTest
                 item2.Checked = true;
                 cameraRes = CameraResolution.RESOLUTION_1280_800_p30_test_pattern;
             }
+            else if (item2.Text == "RESOLUTION_1024_768p30")
+            {
+                item2.Checked = true;
+                cameraRes = CameraResolution.RESOLUTION_1024_768p30;
+            }
+            else if (item2.Text == "RESOLUTION_1024_576p30")
+            {
+                item2.Checked = true;
+                cameraRes = CameraResolution.RESOLUTION_1024_576p30;
+            }
+            else if (item2.Text == "RESOLUTION_1024_576p25")
+            {
+                item2.Checked = true;
+                cameraRes = CameraResolution.RESOLUTION_1024_576p25;
+            }
             else
             {
                 logger.Info("Configuration table not available");
@@ -799,6 +814,105 @@ namespace CameraTest
                     dataOut[0] = (byte)((CameraSettings.table_reg_ov_1280_800_p30_test_pattern[i, 0] >> 8) & 0xFF);
                     dataOut[1] = (byte)(CameraSettings.table_reg_ov_1280_800_p30_test_pattern[i, 0] & 0xFF);
                     dataOut[2] = (byte)(CameraSettings.table_reg_ov_1280_800_p30_test_pattern[i, 1] & 0xFF);
+
+                    count = AardvarkApi.aa_i2c_write(deviceHandle,
+                                                     i2cAddr,
+                                                     AardvarkI2cFlags.AA_I2C_NO_FLAGS,
+                                                     3,
+                                                     dataOut);
+                    if (count < 0)
+                    {
+                        info = String.Format("ERROR: {0}\n", AardvarkApi.aa_status_string(count));
+                        logger.Error(info);
+                        return;
+                    }
+                    if (count == 0)
+                    {
+                        logger.Error("error: no bytes written");
+                        logger.Error("  are you sure you have the right slave address?");
+                        return;
+                    }
+                    else if (count != 3)
+                    {
+                        info = String.Format("ERROR: written {0} bytes (expected 3)", count);
+                        logger.Error(info);
+                        return;
+                    }
+                }
+            }
+            else if (cameraRes == CameraResolution.RESOLUTION_1024_768p30)
+            {
+                for (int i = 0; i < CameraSettings.table_reg_ov_1024_768_p30.Length / 2; i++)
+                {
+                    dataOut[0] = (byte)((CameraSettings.table_reg_ov_1024_768_p30[i, 0] >> 8) & 0xFF);
+                    dataOut[1] = (byte)(CameraSettings.table_reg_ov_1024_768_p30[i, 0] & 0xFF);
+                    dataOut[2] = (byte)(CameraSettings.table_reg_ov_1024_768_p30[i, 1] & 0xFF);
+
+                    count = AardvarkApi.aa_i2c_write(deviceHandle,
+                                                     i2cAddr,
+                                                     AardvarkI2cFlags.AA_I2C_NO_FLAGS,
+                                                     3,
+                                                     dataOut);
+                    if (count < 0)
+                    {
+                        info = String.Format("ERROR: {0}\n", AardvarkApi.aa_status_string(count));
+                        logger.Error(info);
+                        return;
+                    }
+                    if (count == 0)
+                    {
+                        logger.Error("error: no bytes written");
+                        logger.Error("  are you sure you have the right slave address?");
+                        return;
+                    }
+                    else if (count != 3)
+                    {
+                        info = String.Format("ERROR: written {0} bytes (expected 3)", count);
+                        logger.Error(info);
+                        return;
+                    }
+                }
+            }
+            else if (cameraRes == CameraResolution.RESOLUTION_1024_576p30)
+            {
+                for (int i = 0; i < CameraSettings.table_reg_ov_1024_576_p30.Length / 2; i++)
+                {
+                    dataOut[0] = (byte)((CameraSettings.table_reg_ov_1024_576_p30[i, 0] >> 8) & 0xFF);
+                    dataOut[1] = (byte)(CameraSettings.table_reg_ov_1024_576_p30[i, 0] & 0xFF);
+                    dataOut[2] = (byte)(CameraSettings.table_reg_ov_1024_576_p30[i, 1] & 0xFF);
+
+                    count = AardvarkApi.aa_i2c_write(deviceHandle,
+                                                     i2cAddr,
+                                                     AardvarkI2cFlags.AA_I2C_NO_FLAGS,
+                                                     3,
+                                                     dataOut);
+                    if (count < 0)
+                    {
+                        info = String.Format("ERROR: {0}\n", AardvarkApi.aa_status_string(count));
+                        logger.Error(info);
+                        return;
+                    }
+                    if (count == 0)
+                    {
+                        logger.Error("error: no bytes written");
+                        logger.Error("  are you sure you have the right slave address?");
+                        return;
+                    }
+                    else if (count != 3)
+                    {
+                        info = String.Format("ERROR: written {0} bytes (expected 3)", count);
+                        logger.Error(info);
+                        return;
+                    }
+                }
+            }
+            else if (cameraRes == CameraResolution.RESOLUTION_1024_576p25)
+            {
+                for (int i = 0; i < CameraSettings.table_reg_ov_1024_576_p25.Length / 2; i++)
+                {
+                    dataOut[0] = (byte)((CameraSettings.table_reg_ov_1024_576_p25[i, 0] >> 8) & 0xFF);
+                    dataOut[1] = (byte)(CameraSettings.table_reg_ov_1024_576_p25[i, 0] & 0xFF);
+                    dataOut[2] = (byte)(CameraSettings.table_reg_ov_1024_576_p25[i, 1] & 0xFF);
 
                     count = AardvarkApi.aa_i2c_write(deviceHandle,
                                                      i2cAddr,
